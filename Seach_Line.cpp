@@ -3,15 +3,15 @@
 #include <stdio.h>
 //#include <conio.h>
 #include <iostream>
-//#include <cmath>
+#include <cmath>
 //
 using namespace std;
  
 int main(void)
 {
 	
-	int h=0.01,a=1,b=2,x0,x1,x2,xx;
-	float e=0.0001,f,f1,f2,fx;
+	double h=0.01,a=1,b=2,x0=0,x1=0,x2=0,xx;
+	double e=0.0001,f1,f2,fx;
 	x0=1.0;
 	f1=0;
 	f2=0;	//f=pow(x,4)+4*pow(x,3)-3*x*x-36*x+45;
@@ -50,9 +50,8 @@ int main(void)
 		{xx=x0;
 		fx=pow(xx,4.0)+(4*pow(xx,3.0))-(3*xx*xx)-(36*xx)+45;
 		cout<<xx<<"\t"<<fx;
-		
+			cout<<"\n"<<x0<<"\t"<<x1<<"\t"<<x2;
 		}
 cout<<"\n";
 	system("pause");
 }
-
