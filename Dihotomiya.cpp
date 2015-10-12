@@ -1,11 +1,17 @@
-#include "stdafx.h"
+// #include "stdafx.h"
 #include <math.h>
 #include <stdio.h>
-#include <conio.h>
+// #include <conio.h>
 #include <iostream>
 
 using namespace std;
- 
+
+double func(double x) {
+ double rez=0;
+ rez= pow(x,4.0)+(4*pow(x,3.0))-(3*x*x)-(36*x)+45;
+ return rez;
+}
+
 int main(void)
 {
 	
@@ -16,8 +22,8 @@ int main(void)
 		{
 			x1=(a+b-delta)/2;
 			x2=(a+b+delta)/2;
-			f1=pow(x1,4.0)+(4*pow(x1,3.0))-(3*x1*x1)-(36*x1)+45;
-			f2=pow(x2,4.0)+(4*pow(x2,3.0))-(3*x2*x2)-(36*x2)+45;
+			f1=func(x1);
+			f2=func(x2);
 				if (f1<=f2)	{
 					b=x2;
 							}
@@ -26,9 +32,8 @@ int main(void)
 	while (b-a>e);
 
 		xx=(a+b)/2;
-		fx=pow(xx,4.0)+(4*pow(xx,3.0))-(3*xx*xx)-(36*xx)+45;
+		fx=func(xx);
 		cout << xx<<"\t"<<fx<<"\n";
 	
 	system("pause"); //by Vitalii Yatsenko
 }
-
